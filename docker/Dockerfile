@@ -12,7 +12,7 @@ RUN apt-get update && \
 		python3-tk
 ########## Cache busting ##########
 ARG CACHEBUST=1
-########## plot_pcd ##########
+########## plot_pc_data ##########
 RUN apt-get update && \
     apt-get install -y \
 		libgl1-mesa-dev \
@@ -20,7 +20,7 @@ RUN apt-get update && \
 	pip3 install \
 		open3d \
 		matplotlib && \
-	cd ~/
-	# git clone https://github.com/ozakiryota/plot_pcd.git
+	cd ~/ && \
+	git clone https://github.com/ozakiryota/plot_pc_data.git
 ########## Initial position ##########
-WORKDIR /root/plot_pcd
+WORKDIR /root/plot_pc_data

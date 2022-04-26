@@ -6,11 +6,11 @@ import numpy as np
 import os
 import matplotlib.pyplot as plt
 
-class PlotPcd:
+class PlotPcData:
     def __init__(self):
         self.arg_parser = argparse.ArgumentParser()
         self.args = self.setArgument()
-        self.target_extension = ['pcd']
+        self.target_extension = ['pcd', 'ply']
 
     def setArgument(self):
         self.arg_parser.add_argument('--pcd_path', required=True)
@@ -125,5 +125,5 @@ class PlotPcd:
         print('Save:', save_path)
 
 if __name__ == '__main__':
-    plot_pcd = PlotPcd()
-    plot_pcd.main()
+    plot_pc_data = PlotPcData()
+    plot_pc_data.main()

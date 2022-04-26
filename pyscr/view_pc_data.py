@@ -2,11 +2,11 @@ import argparse
 import glob
 import open3d
 
-class ViewPcd:
+class ViewPcData:
     def __init__(self):
         self.arg_parser = argparse.ArgumentParser()
         self.args = self.setArgument()
-        self.target_extension = ['pcd']
+        self.target_extension = ['pcd', 'ply']
 
     def setArgument(self):
         self.arg_parser.add_argument('--pcd_path', required=True)
@@ -30,5 +30,5 @@ class ViewPcd:
         return pcd_path_list
 
 if __name__ == '__main__':
-    view_pcd = ViewPcd()
-    view_pcd.view()
+    view_pc_data = ViewPcData()
+    view_pc_data.view()

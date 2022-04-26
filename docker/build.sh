@@ -1,6 +1,6 @@
 #!/bin/bash
 
-image="plot_pcd"
+image="plot_pc_data"
 tag="latest"
 
 docker build . \
