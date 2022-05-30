@@ -57,11 +57,11 @@ class PlotPcData:
                     xlim=[self.args.y_min, self.args.y_max], ylim=[self.args.z_min, self.args.z_max]
                 )
                 self.plotAndSave(
-                    os.path.join(pcd_name, 'xz.png'),
-                    'x [m]', 'z [m]',
-                    [points[:, 0]], [points[:, 2]],
+                    os.path.join(pcd_name, 'zx.png'),
+                    'z [m]', 'x [m]',
+                    [points[:, 2]], [points[:, 0]],
                     invert_x_axis=False,
-                    xlim=[self.args.x_min, self.args.x_max], ylim=[self.args.z_min, self.args.z_max]
+                    xlim=[self.args.z_min, self.args.z_max], ylim=[self.args.x_min, self.args.x_max]
                 )
         if self.args.flag_merge:
             self.plotAndSave(
@@ -79,11 +79,11 @@ class PlotPcData:
                 xlim=[self.args.y_min, self.args.y_max], ylim=[self.args.z_min, self.args.z_max]
             )
             self.plotAndSave(
-                'xz.png',
-                'x [m]', 'z [m]',
-                points_x_list, points_z_list,
+                'zx.png',
+                'z [m]', 'x [m]',
+                points_z_list, points_x_list,
                 invert_x_axis=False,
-                xlim=[self.args.x_min, self.args.x_max], ylim=[self.args.z_min, self.args.z_max]
+                xlim=[self.args.z_min, self.args.z_max], ylim=[self.args.x_min, self.args.x_max]
             )
         # plt.show()
 
