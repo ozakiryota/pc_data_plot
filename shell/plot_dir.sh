@@ -1,6 +1,11 @@
 #!/bin/bash
 
-pcd_dir="../pcd/sample"
+if [ $# != 1 ]; then
+	echo "Usage: ./plot_dir.sh PCD_DIR"
+	exit 1
+fi
+
+pcd_dir=$@
 pcd_dir_name=${pcd_dir##*/}
 
 python3 ../pyscr/plot_pc_data.py \
