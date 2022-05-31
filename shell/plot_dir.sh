@@ -6,7 +6,7 @@ if [ $# != 1 ]; then
 fi
 
 pcd_dir=$@
-pcd_dir_name=${pcd_dir##*/}
+pcd_dir_name=`basename $pcd_dir`
 
 python3 ../pyscr/plot_pc_data.py \
     --pcd_path $pcd_dir/\* \
